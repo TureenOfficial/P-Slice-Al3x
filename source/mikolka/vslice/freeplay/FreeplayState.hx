@@ -143,7 +143,7 @@ class FreeplayState extends MusicBeatSubstate
 
 	var diffIdsCurrent:Array<String> = [];
 	// List of available difficulties for the total song list, without `-variation` at the end (no duplicates or nulls).
-	var diffIdsTotal:Array<String> = ['easy', "normal", "hard"]; // ? forcing this diff order
+	var diffIdsTotal:Array<String> = ['easy', "hard"]; // ? forcing this diff order
 
 	var curSelected:Int = 0;
 	var currentDifficulty:String = Constants.DEFAULT_DIFFICULTY;
@@ -293,7 +293,7 @@ class FreeplayState extends MusicBeatSubstate
 		sparksADD = new FlxSprite(0, 0);
 		txtCompletion = new AtlasText(1185, 87, '69', AtlasFont.FREEPLAY_CLEAR);
 
-		ostName = new FlxText(8, 8, FlxG.width - 8 - 8, 'OFFICIAL OST', 48);
+		ostName = new FlxText(8, 8, FlxG.width - 8 - 8, 'VS AL3X OST', 48);
 		charSelectHint = new FlxText(-40, 18, FlxG.width - 8 - 8, 'Press [ LOL ] to change characters', 32);
 
 		bgDad = new FlxSprite(backingCard.pinkBack.width * 0.74, 0).loadGraphic(styleData == null ? 'freeplay/freeplayBGdad' : styleData.getBgAssetGraphic());
@@ -302,7 +302,7 @@ class FreeplayState extends MusicBeatSubstate
 		//? end of init
 
 		super.create();
-		var diffIdsTotalModBinds:Map<String, String> = ["easy" => "", "normal" => "", "hard" => ""];
+		var diffIdsTotalModBinds:Map<String, String> = ["easy" => "", "hard" => ""];
 
 		FlxG.state.persistentUpdate = false;
 
